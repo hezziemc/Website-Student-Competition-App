@@ -1,0 +1,8 @@
+{
+  "name": "Web PolyU Design Subsidy Portal",
+  "description": "Interactive multi-screen prototype for PolyU Design Competition & Award Subsidy Scheme including student dashboard, grant application form, lifecycle tracker, reimbursement vault, and profile menu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
