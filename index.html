@@ -71,29 +71,25 @@
       }
     </style>
   </head>
-  <body class="min-h-full flex flex-col relative text-[#1a1a1a]">
+  <body class="min-h-full flex flex-col relative text-[#1a1a1a] pb-20 md:pb-0">
 
     <!-- ========================================== -->
     <!-- GLOBAL TOP NAVIGATION BAR -->
     <!-- ========================================== -->
     <header class="sticky top-0 z-40 bg-white border-b border-[#e5e7eb] shadow-xs">
-      <div class="max-w-[1440px] mx-auto px-6 h-18 flex items-center justify-between">
+      <div class="max-w-[1440px] mx-auto px-6 min-h-[72px] py-[5px] flex items-center justify-between">
         <!-- Brand Lockup -->
         <div class="flex items-center gap-3">
-          <button id="nav-brand-btn" class="flex items-center gap-3.5 group focus:outline-hidden focus-visible:ring-2 focus-visible:ring-[#8A1529] rounded-md p-1" aria-label="Go to Dashboard">
-            <!-- PolyU Design Hexagonal Geometric Icon -->
-            <div class="w-9 h-9 flex items-center justify-center shrink-0">
-              <svg viewBox="0 0 40 40" fill="none" class="w-full h-full text-[#8A1529]">
-                <path d="M20 2L35.5885 11V29L20 38L4.41154 29V11L20 2Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-                <path d="M20 9L29 14.5V25.5L20 31L11 25.5V14.5L20 9Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-                <circle cx="20" cy="20" r="3.5" fill="currentColor"/>
-              </svg>
+          <button id="nav-brand-btn" class="flex items-center gap-3.5 group focus:outline-hidden focus-visible:ring-2 focus-visible:ring-[#8A1529] rounded-lg py-[5px] px-2" aria-label="Go to Dashboard">
+            <!-- PolyU Design Official Logo -->
+            <div class="w-10 h-10 flex items-center justify-center shrink-0">
+              <img src="/polyu-logo.png" alt="PolyU Logo" class="w-full h-full object-contain" onerror="this.src='/public/assets/aistudio/image_bcbd73f0.png'" />
             </div>
-            <div class="text-left">
-              <div class="text-[17px] font-extrabold tracking-tight text-[#8A1529] leading-tight">
+            <div class="text-left py-[5px]">
+              <div class="text-[17.5px] font-extrabold tracking-tight text-[#8A1529] leading-tight">
                 POLYU DESIGN
               </div>
-              <div class="text-[9.5px] font-bold tracking-[0.14em] text-[#737373] uppercase leading-none mt-0.5">
+              <div id="header-portal-subtitle" class="text-[10px] font-bold tracking-[0.15em] text-[#737373] uppercase leading-none mt-1">
                 SUBSIDY PORTAL
               </div>
             </div>
@@ -101,20 +97,20 @@
         </div>
 
         <!-- Desktop Navigation Items -->
-        <nav class="hidden md:flex items-center gap-1.5" aria-label="Main Navigation">
-          <button id="nav-tab-dashboard" class="nav-tab px-4 py-1.5 rounded-[6px] text-[13.5px] font-semibold bg-[#ebebeb] text-[#1a1a1a] transition-all focus:outline-hidden focus-visible:ring-2 focus-visible:ring-[#8A1529]">
+        <nav class="hidden md:flex items-center gap-2" aria-label="Main Navigation">
+          <button id="nav-tab-dashboard" class="nav-tab px-4 py-[5px] rounded-[6px] text-[13.5px] font-semibold bg-[#ebebeb] text-[#1a1a1a] transition-all focus:outline-hidden focus-visible:ring-2 focus-visible:ring-[#8A1529]">
             Dashboard
           </button>
-          <button id="nav-tab-form" class="nav-tab px-4 py-1.5 rounded-[6px] text-[13.5px] font-medium text-[#595959] hover:text-[#1a1a1a] hover:bg-gray-100 transition-all focus:outline-hidden focus-visible:ring-2 focus-visible:ring-[#8A1529]">
+          <button id="nav-tab-form" class="nav-tab px-4 py-[5px] rounded-[6px] text-[13.5px] font-medium text-[#595959] hover:text-[#1a1a1a] hover:bg-gray-100 transition-all focus:outline-hidden focus-visible:ring-2 focus-visible:ring-[#8A1529]">
             New Application
           </button>
-          <button id="nav-tab-tracker" class="nav-tab px-4 py-1.5 rounded-[6px] text-[13.5px] font-medium text-[#595959] hover:text-[#1a1a1a] hover:bg-gray-100 transition-all focus:outline-hidden focus-visible:ring-2 focus-visible:ring-[#8A1529]">
+          <button id="nav-tab-tracker" class="nav-tab px-4 py-[5px] rounded-[6px] text-[13.5px] font-medium text-[#595959] hover:text-[#1a1a1a] hover:bg-gray-100 transition-all focus:outline-hidden focus-visible:ring-2 focus-visible:ring-[#8A1529]">
             Tracker
           </button>
-          <button id="nav-tab-vault" class="nav-tab px-4 py-1.5 rounded-[6px] text-[13.5px] font-medium text-[#595959] hover:text-[#1a1a1a] hover:bg-gray-100 transition-all focus:outline-hidden focus-visible:ring-2 focus-visible:ring-[#8A1529]">
+          <button id="nav-tab-vault" class="nav-tab px-4 py-[5px] rounded-[6px] text-[13.5px] font-medium text-[#595959] hover:text-[#1a1a1a] hover:bg-gray-100 transition-all focus:outline-hidden focus-visible:ring-2 focus-visible:ring-[#8A1529]">
             Vault
           </button>
-          <button id="nav-tab-logs" class="nav-tab px-4 py-1.5 rounded-[6px] text-[13.5px] font-medium text-[#595959] hover:text-[#1a1a1a] hover:bg-gray-100 transition-all focus:outline-hidden focus-visible:ring-2 focus-visible:ring-[#8A1529]">
+          <button id="nav-tab-logs" class="nav-tab px-4 py-[5px] rounded-[6px] text-[13.5px] font-medium text-[#595959] hover:text-[#1a1a1a] hover:bg-gray-100 transition-all focus:outline-hidden focus-visible:ring-2 focus-visible:ring-[#8A1529]">
             Outbox & Logs
           </button>
         </nav>
@@ -158,7 +154,7 @@
       <div id="profile-dropdown-backdrop" class="absolute inset-0"></div>
 
       <!-- Dropdown Card -->
-      <div class="absolute right-4 sm:right-6 top-19 w-[calc(100%-2rem)] sm:w-96 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transform transition-all">
+      <div class="absolute right-4 sm:right-6 top-[76px] sm:top-[80px] w-[calc(100%-2rem)] sm:w-96 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transform transition-all">
         <!-- Student Info Header -->
         <div class="p-5 bg-gradient-to-b from-[#fdf7f7] to-white border-b border-gray-100">
           <div class="flex items-start gap-4">
@@ -615,7 +611,7 @@
                 <span class="text-[11px] font-extrabold tracking-wider text-amber-300 uppercase">HONORARIUM PROGRAM</span>
               </div>
 
-              <h4 class="text-base font-bold text-white leading-snug">Won a Design Award Recently?</h4>
+              <h4 class="text-base font-bold text-white leading-snug py-[5px]">WON A DESIGN AWARD RECENTLY?</h4>
               <p class="text-xs text-amber-100/80 mt-2 leading-relaxed">
                 Upload your official award certificate or jury results within 30 days of announcement to claim supplementary School of Design honorarium grants.
               </p>
@@ -773,21 +769,16 @@
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                    Full Name (as per HKID/Passport) <span class="text-gray-400 font-normal">🔒 Locked</span>
+                    Full Name (as per HKID/Passport)
                   </label>
-                  <div class="relative">
-                    <input type="text" value="Rachel Tsang" readonly class="w-full bg-gray-50 border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm font-semibold text-gray-800 pr-10 cursor-not-allowed" />
-                    <span class="absolute right-3 top-3 text-emerald-600">
-                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                    </span>
-                  </div>
+                  <input type="text" value="Rachel Tsang" class="w-full bg-white border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm font-normal text-gray-800 focus:border-[#8A1529] focus:ring-1 focus:ring-[#8A1529]" />
                 </div>
 
                 <div>
                   <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                    Student ID <span class="text-gray-400 font-normal">🔒 Locked</span>
+                    Student ID
                   </label>
-                  <input type="text" value="22084912D" readonly class="w-full bg-gray-50 border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm font-mono font-semibold text-gray-800 cursor-not-allowed" />
+                  <input type="text" value="22084912D" class="w-full bg-white border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm font-normal text-gray-800 focus:border-[#8A1529] focus:ring-1 focus:ring-[#8A1529]" />
                 </div>
               </div>
 
@@ -795,12 +786,12 @@
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label for="form-tel" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">Telephone No.</label>
-                  <input id="form-tel" type="tel" value="+852 9123 4567" required class="w-full bg-white border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm font-medium text-gray-800 focus:border-[#8A1529] focus:ring-1 focus:ring-[#8A1529]" />
+                  <input id="form-tel" type="tel" value="+852 9123 4567" required class="w-full bg-white border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm font-normal text-gray-800 focus:border-[#8A1529] focus:ring-1 focus:ring-[#8A1529]" />
                 </div>
 
                 <div>
                   <label for="form-email" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">PolyU Connect Email</label>
-                  <input id="form-email" type="email" value="rachel.tsang@connect.polyu.hk" required class="w-full bg-white border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm font-medium text-gray-800 focus:border-[#8A1529] focus:ring-1 focus:ring-[#8A1529]" />
+                  <input id="form-email" type="email" value="rachel.tsang@connect.polyu.hk" required class="w-full bg-white border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm font-normal text-gray-800 focus:border-[#8A1529] focus:ring-1 focus:ring-[#8A1529]" />
                 </div>
               </div>
 
@@ -874,7 +865,7 @@
               <!-- Graduate Program input (disabled) -->
               <div>
                 <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">IF 2025 GRADUATE, SPECIFY PROGRAMME NAME (BA ONLY):</label>
-                <input type="text" value="Not applicable (Applicant enrolled in Year 3 regular stream)" disabled class="w-full bg-gray-50 border border-gray-200 rounded-lg px-3.5 py-2 text-xs text-gray-400 italic cursor-not-allowed" />
+                <input type="text" value="Not applicable (Applicant enrolled in Year 3 regular stream)" disabled class="w-full bg-gray-50 border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm font-normal text-gray-400 italic cursor-not-allowed" />
               </div>
             </div>
 
@@ -887,14 +878,14 @@
 
               <div>
                 <label for="form-comp-title" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">TITLE OF COMPETITION / AWARD</label>
-                <input id="form-comp-title" type="text" value="Red Dot Award: Brands & Communication Design 2025" required class="w-full bg-white border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm font-semibold text-gray-800 focus:border-[#8A1529] focus:ring-1 focus:ring-[#8A1529]" />
+                <input id="form-comp-title" type="text" value="Red Dot Award: Brands & Communication Design 2025" required class="w-full bg-white border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm font-normal text-gray-800 focus:border-[#8A1529] focus:ring-1 focus:ring-[#8A1529]" />
               </div>
 
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label for="form-comp-url" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">OFFICIAL WEBSITE URL</label>
                   <div class="relative">
-                    <input id="form-comp-url" type="url" value="https://www.red-dot.org/brands-communication" class="w-full bg-white border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm text-gray-800 pr-10 focus:border-[#8A1529] focus:ring-1 focus:ring-[#8A1529]" />
+                    <input id="form-comp-url" type="url" value="https://www.red-dot.org/brands-communication" class="w-full bg-white border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm font-normal text-gray-800 pr-10 focus:border-[#8A1529] focus:ring-1 focus:ring-[#8A1529]" />
                     <span class="absolute right-3 top-3 text-gray-400">
                       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                     </span>
@@ -903,7 +894,7 @@
 
                 <div>
                   <label for="form-comp-cat" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">CATEGORY (IF ANY)</label>
-                  <input id="form-comp-cat" type="text" value="Digital Media / Interface & User Experience Design" class="w-full bg-white border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm text-gray-800 focus:border-[#8A1529] focus:ring-1 focus:ring-[#8A1529]" />
+                  <input id="form-comp-cat" type="text" value="Digital Media / Interface & User Experience Design" class="w-full bg-white border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm font-normal text-gray-800 focus:border-[#8A1529] focus:ring-1 focus:ring-[#8A1529]" />
                 </div>
               </div>
 
@@ -921,7 +912,7 @@
                 <div>
                   <label for="form-announcement-date" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">RESULT ANNOUNCEMENT DATE</label>
                   <div class="relative">
-                    <input id="form-announcement-date" type="text" value="15/10/2025" class="w-full bg-white border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm text-gray-800 focus:border-[#8A1529] focus:ring-1 focus:ring-[#8A1529]" />
+                    <input id="form-announcement-date" type="text" value="15/10/2025" class="w-full bg-white border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm font-normal text-gray-800 focus:border-[#8A1529] focus:ring-1 focus:ring-[#8A1529]" />
                     <span class="absolute right-3 top-3 text-gray-400">
                       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                     </span>
@@ -959,7 +950,7 @@
 
               <div>
                 <label for="form-proj-title" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">TITLE OF PROJECT</label>
-                <input id="form-proj-title" type="text" value="Sensory Oasis: Multimodal Adaptive Workspace Environment" required class="w-full bg-white border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm font-semibold text-gray-800 focus:border-[#8A1529] focus:ring-1 focus:ring-[#8A1529]" />
+                <input id="form-proj-title" type="text" value="Sensory Oasis: Multimodal Adaptive Workspace Environment" required class="w-full bg-white border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm font-normal text-gray-800 focus:border-[#8A1529] focus:ring-1 focus:ring-[#8A1529]" />
               </div>
 
               <!-- Group Project Question -->
@@ -979,7 +970,7 @@
                 </div>
                 <div class="space-y-1">
                   <span class="text-[11px] text-gray-500">Other group member(s) from School of Design (Name & Student ID):</span>
-                  <input type="text" value="Marcus Leung (22081145D), Chloe Wong (22079934D)" class="w-full bg-white border border-gray-300 rounded-lg px-3.5 py-2 text-xs text-gray-800 focus:border-[#8A1529] focus:ring-1 focus:ring-[#8A1529]" />
+                  <input type="text" value="Marcus Leung (22081145D), Chloe Wong (22079934D)" class="w-full bg-white border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm font-normal text-gray-800 focus:border-[#8A1529] focus:ring-1 focus:ring-[#8A1529]" />
                 </div>
               </div>
 
@@ -1002,11 +993,11 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
                   <div>
                     <label class="block text-[11px] text-gray-500 mb-1">Subject Name / Code:</label>
-                    <input type="text" value="SD3102 Advanced Interaction Studio" class="w-full bg-white border border-gray-300 rounded-lg px-3.5 py-2 text-xs font-semibold text-gray-800" />
+                    <input type="text" value="SD3102 Advanced Interaction Studio" class="w-full bg-white border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm font-normal text-gray-800 focus:border-[#8A1529] focus:ring-1 focus:ring-[#8A1529]" />
                   </div>
                   <div>
                     <label class="block text-[11px] text-gray-500 mb-1">Tutor / Endorser Name:</label>
-                    <input type="text" value="Dr. K. Wong" class="w-full bg-white border border-gray-300 rounded-lg px-3.5 py-2 text-xs font-semibold text-gray-800" />
+                    <input type="text" value="Dr. K. Wong" class="w-full bg-white border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm font-normal text-gray-800 focus:border-[#8A1529] focus:ring-1 focus:ring-[#8A1529]" />
                   </div>
                 </div>
               </div>
@@ -1026,7 +1017,7 @@
                   </label>
                   <div class="flex items-center gap-2 shrink-0">
                     <span class="text-xs font-bold text-gray-500 bg-gray-100 px-2 py-1.5 rounded">HKD (HK$)</span>
-                    <input id="input-fee" type="text" value="2,400.00" oninput="updateFormBudget()" class="w-28 text-right bg-white border border-gray-300 rounded-lg px-3 py-1.5 text-xs font-bold font-mono text-gray-800" />
+                    <input id="input-fee" type="text" value="2,400.00" oninput="updateFormBudget()" class="w-28 text-right bg-white border border-gray-300 rounded-lg px-3.5 py-2 text-sm font-normal text-gray-800 focus:border-[#8A1529] focus:ring-1 focus:ring-[#8A1529]" />
                   </div>
                 </div>
 
@@ -1041,7 +1032,7 @@
                   </label>
                   <div class="flex items-center gap-2 shrink-0">
                     <span class="text-xs font-medium text-gray-500">Estimated HK$</span>
-                    <input id="input-shipping" type="text" value="0.00" oninput="updateFormBudget()" class="w-28 text-right bg-white border border-gray-300 rounded-lg px-3 py-1.5 text-xs font-medium font-mono text-gray-800" />
+                    <input id="input-shipping" type="text" value="0.00" oninput="updateFormBudget()" class="w-28 text-right bg-white border border-gray-300 rounded-lg px-3.5 py-2 text-sm font-normal text-gray-800 focus:border-[#8A1529] focus:ring-1 focus:ring-[#8A1529]" />
                   </div>
                 </div>
               </div>
@@ -1157,17 +1148,17 @@
             <!-- Submission Readiness Card -->
             <div class="bg-white rounded-2xl border border-gray-200/90 shadow-2xs p-6 space-y-4">
               <div class="flex items-center justify-between pb-3 border-b border-gray-100">
-                <h3 class="text-sm font-bold text-[#1a1a1a] uppercase tracking-wider">SUBMISSION READINESS</h3>
+                <h3 class="text-[16px] font-bold text-[#1a1a1a] uppercase tracking-wider">SUBMISSION READINESS</h3>
                 <span id="readiness-counter" class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">4 of 4 Ready</span>
               </div>
 
-              <div class="space-y-3.5">
+              <div class="space-y-4">
                 <div class="flex items-start gap-3">
                   <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                   </div>
                   <div>
-                    <h5 class="text-xs font-bold text-gray-900">01. Applicant Information</h5>
+                    <h5 class="text-[16px] font-bold text-gray-900">01. Applicant Information</h5>
                     <p class="text-[11px] text-gray-500">Profile synced & verified</p>
                   </div>
                 </div>
@@ -1177,7 +1168,7 @@
                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                   </div>
                   <div>
-                    <h5 class="text-xs font-bold text-gray-900">02. Competition Data</h5>
+                    <h5 class="text-[16px] font-bold text-gray-900">02. Competition Data</h5>
                     <p class="text-[11px] text-gray-500">Red Dot Award 2025 Tier A</p>
                   </div>
                 </div>
@@ -1187,7 +1178,7 @@
                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                   </div>
                   <div>
-                    <h5 class="text-xs font-bold text-gray-900">03. Project & Budget Claim</h5>
+                    <h5 class="text-[16px] font-bold text-gray-900">03. Project & Budget Claim</h5>
                     <p id="readiness-budget-text" class="text-[11px] text-gray-500">HK$ 2,400.00 • Receipt verified</p>
                   </div>
                 </div>
@@ -1197,7 +1188,7 @@
                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                   </div>
                   <div>
-                    <h5 class="text-xs font-bold text-gray-900">04. Signatures & Undertakings</h5>
+                    <h5 class="text-[16px] font-bold text-gray-900">04. Signatures & Undertakings</h5>
                     <p class="text-[11px] text-gray-500">SSO Authenticated</p>
                   </div>
                 </div>
@@ -2060,12 +2051,12 @@
                       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                     </div>
                     <div>
-                      <h5 class="text-xs font-bold text-gray-900">Red Dot Award: Design Concept 2024</h5>
+                      <h5 class="text-[16px] font-bold text-gray-900">Red Dot Award: Design Concept 2024</h5>
                       <p class="text-[11px] text-gray-500">12 Nov 2024 • FPS Wire (Ref #FPS-994821) • <strong class="text-emerald-700">COMPLETED</strong></p>
                     </div>
                   </div>
                   <div class="flex items-center gap-4 shrink-0">
-                    <span class="text-sm font-extrabold text-gray-900 font-tabular">HK$ 2,500.00</span>
+                    <span class="text-[16px] font-extrabold text-gray-900 font-tabular">HK$ 2,500.00</span>
                     <button onclick="showToast('Downloading Official Voucher...')" class="inline-flex items-center gap-1 px-2.5 py-1 rounded text-xs font-medium border border-gray-200 text-gray-700 hover:bg-white">
                       ↓ Voucher
                     </button>
@@ -2079,12 +2070,12 @@
                       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                     </div>
                     <div>
-                      <h5 class="text-xs font-bold text-gray-900">Core77 Design Entry (AY 23/24)</h5>
+                      <h5 class="text-[16px] font-bold text-gray-900">Core77 Design Entry (AY 23/24)</h5>
                       <p class="text-[11px] text-gray-500">18 May 2024 • Hang Seng Wire (Ref #FO-8829) • <strong class="text-emerald-700">COMPLETED</strong></p>
                     </div>
                   </div>
                   <div class="flex items-center gap-4 shrink-0">
-                    <span class="text-sm font-extrabold text-gray-900 font-tabular">HK$ 1,200.00</span>
+                    <span class="text-[16px] font-extrabold text-gray-900 font-tabular">HK$ 1,200.00</span>
                     <button onclick="showToast('Downloading Official Voucher...')" class="inline-flex items-center gap-1 px-2.5 py-1 rounded text-xs font-medium border border-gray-200 text-gray-700 hover:bg-white">
                       ↓ Voucher
                     </button>
@@ -2254,7 +2245,7 @@
     <!-- ========================================== -->
     <!-- INTERACTIVE TOAST NOTIFICATION CONTAINER   -->
     <!-- ========================================== -->
-    <div id="toast-notification" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+    <div id="toast-notification" class="fixed bottom-20 md:bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
       <div class="bg-gray-900 text-white px-5 py-3.5 rounded-xl shadow-2xl flex items-center gap-3 text-sm font-semibold max-w-md border border-gray-700">
         <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 shrink-0"></span>
         <span id="toast-message">Action completed successfully</span>
@@ -2269,7 +2260,7 @@
         <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-6 border-b border-gray-100">
           <div class="space-y-1.5 max-w-xl">
             <div class="flex items-center gap-2">
-              <span class="w-2 h-4 bg-[#8A1529] rounded-xs"></span>
+              <img src="/polyu-logo.png" alt="PolyU Logo" class="w-5 h-5 object-contain" onerror="this.src='/public/assets/aistudio/image_bcbd73f0.png'" />
               <span class="text-sm font-extrabold text-[#1a1a1a] tracking-tight">POLYU DESIGN</span>
               <span class="text-xs font-semibold text-gray-400">|</span>
               <span class="text-xs font-bold text-gray-600">SCHOOL OF DESIGN</span>
@@ -2300,6 +2291,37 @@
       </div>
     </footer>
 
+    <!-- ========================================== -->
+    <!-- MOBILE BOTTOM NAVIGATION BAR               -->
+    <!-- Matching 5_Profile_Menu.png bottom dock    -->
+    <!-- ========================================== -->
+    <nav class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 shadow-lg px-2 py-2 flex items-center justify-around" aria-label="Mobile Navigation">
+      <button id="mobile-tab-dashboard" onclick="navigateToScreen('screen-dashboard')" class="flex flex-col items-center justify-center flex-1 py-1 text-[#8A1529] font-bold transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+        </svg>
+        <span class="text-[11px] mt-0.5">Home</span>
+      </button>
+      <button id="mobile-tab-form" onclick="navigateToScreen('screen-form')" class="flex flex-col items-center justify-center flex-1 py-1 text-[#737373] hover:text-[#1a1a1a] font-medium transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+        <span class="text-[11px] mt-0.5">Apply</span>
+      </button>
+      <button id="mobile-tab-tracker" onclick="navigateToScreen('screen-tracker')" class="flex flex-col items-center justify-center flex-1 py-1 text-[#737373] hover:text-[#1a1a1a] font-medium transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+        </svg>
+        <span class="text-[11px] mt-0.5">Tracker</span>
+      </button>
+      <button id="mobile-tab-vault" onclick="navigateToScreen('screen-vault')" class="flex flex-col items-center justify-center flex-1 py-1 text-[#737373] hover:text-[#1a1a1a] font-medium transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V10M5 21V10M12 21V10M3 21h18M3 10h18M12 3l9 7H3z"/>
+        </svg>
+        <span class="text-[11px] mt-0.5">Vault</span>
+      </button>
+    </nav>
+
     <!-- ============================================================ -->
     <!-- VANILLA JAVASCRIPT EVENT LISTENERS & SPA NAVIGATION LOGIC    -->
     <!-- All screen switching toggles Tailwind's .hidden class strictly-->
@@ -2319,6 +2341,22 @@
         [SCREENS.FORM]: 'nav-tab-form',
         [SCREENS.TRACKER]: 'nav-tab-tracker',
         [SCREENS.VAULT]: 'nav-tab-vault',
+      };
+
+      // Mobile navigation tabs mapping
+      const MOBILE_TABS = {
+        [SCREENS.DASHBOARD]: 'mobile-tab-dashboard',
+        [SCREENS.FORM]: 'mobile-tab-form',
+        [SCREENS.TRACKER]: 'mobile-tab-tracker',
+        [SCREENS.VAULT]: 'mobile-tab-vault',
+      };
+
+      // Header subtitle text mapping per screen (all capitals)
+      const SCREEN_SUBTITLES = {
+        [SCREENS.DASHBOARD]: 'SUBSIDY PORTAL',
+        [SCREENS.FORM]: 'APPLICATION',
+        [SCREENS.TRACKER]: 'TRACKER',
+        [SCREENS.VAULT]: 'VAULT',
       };
 
       /**
@@ -2344,14 +2382,31 @@
         // Close profile dropdown if open
         closeProfileMenu();
 
-        // Update nav tab active pill styling
+        // Dynamically update heading word based on active screen
+        const subtitleEl = document.getElementById('header-portal-subtitle');
+        if (subtitleEl && SCREEN_SUBTITLES[targetScreenId]) {
+          subtitleEl.textContent = SCREEN_SUBTITLES[targetScreenId];
+        }
+
+        // Update desktop nav tab active pill styling
         Object.entries(NAV_TABS).forEach(([screenId, tabId]) => {
           const tabBtn = document.getElementById(tabId);
           if (!tabBtn) return;
           if (screenId === targetScreenId) {
-            tabBtn.className = "nav-tab px-4 py-1.5 rounded-[6px] text-[13.5px] font-semibold bg-[#ebebeb] text-[#1a1a1a] transition-all focus:outline-hidden focus-visible:ring-2 focus-visible:ring-[#8A1529]";
+            tabBtn.className = "nav-tab px-4 py-[5px] rounded-[6px] text-[13.5px] font-semibold bg-[#ebebeb] text-[#1a1a1a] transition-all focus:outline-hidden focus-visible:ring-2 focus-visible:ring-[#8A1529]";
           } else {
-            tabBtn.className = "nav-tab px-4 py-1.5 rounded-[6px] text-[13.5px] font-medium text-[#595959] hover:text-[#1a1a1a] hover:bg-gray-100 transition-all focus:outline-hidden focus-visible:ring-2 focus-visible:ring-[#8A1529]";
+            tabBtn.className = "nav-tab px-4 py-[5px] rounded-[6px] text-[13.5px] font-medium text-[#595959] hover:text-[#1a1a1a] hover:bg-gray-100 transition-all focus:outline-hidden focus-visible:ring-2 focus-visible:ring-[#8A1529]";
+          }
+        });
+
+        // Update mobile bottom dock tab active styling
+        Object.entries(MOBILE_TABS).forEach(([screenId, tabId]) => {
+          const mBtn = document.getElementById(tabId);
+          if (!mBtn) return;
+          if (screenId === targetScreenId) {
+            mBtn.className = "flex flex-col items-center justify-center flex-1 py-1 text-[#8A1529] font-bold transition-colors";
+          } else {
+            mBtn.className = "flex flex-col items-center justify-center flex-1 py-1 text-[#737373] hover:text-[#1a1a1a] font-medium transition-colors";
           }
         });
       }
